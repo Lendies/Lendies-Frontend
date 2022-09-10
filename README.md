@@ -20,7 +20,7 @@ An example useage scenario may look as follows:
 6. User B receives "stream" from User A.
 
 ## Contributing
-We welcome all contributions and are excited to build with you! One way would be to fork the repo, implement your features, then create a PR from the fork. Someone will review the PR to approve/reject. For questions, you can reach out on our Discord channel.
+We welcome all contributions and are excited to build with you! One way would be to fork the repo, implement your features, then create a PR from the fork. Someone will review the PR to approve/reject. For questions, you can reach out on our [Discord Channel](https://discord.gg/KdyG52dz)
 
 The CompanyManager SC Deployed in the Polygon Network:
 https://mumbai.polygonscan.com/address/0xad0448749ac74ad9c3f873abee181c7080dca09f
