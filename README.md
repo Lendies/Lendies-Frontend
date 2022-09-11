@@ -1,7 +1,26 @@
-# WorkiesApp
-We are targeting the Refi (Regenerative Finance) Prize. Our hack is the stepping stone for upward mobility. 
-Data shows that it is expensive to not have funds available. It means that one may have to pay overdraft fees, have to take out high interest loans, and not have the luxury of buying in bulk among other problems. We help this problem by allowing employers to pay their staff in live time so they do not need to wait till payday to be paid. This more fair way of getting paid goes a long way. But we take this a step further. We believe that it is in the best interest of a employer to make sure that their community is thriving, so we created a way for the employer to loan money to their employees. 
-These two features can also be the stepping stones for a universal credit score. As the data of the salary payment and the loan repayment will be saved so others can access and underwrite loans with this data. This can be the foundation for a global credit score and allow people to move freely and have a less biased way of borrowing.
+# Lendies
+
+Lendies is a decentralized lending protocol enabling peer-to-peer token loan service.
+
+## Vision
+
+A large portion of the population may not have easy access to banks, loans, credit, or emergency finances. By establishing a decentralized lending system, we introduce the idea of on-chain credit based on an individual's debt/income ratio. This allows us to help address the problem of financial inclusion for nearly 30% of the world population.
+
+First, our focus is credibility in peer-to-peer lending. Initially, we will establish proof-of-concept by implementing friend-to-friend or family-to-family lending capability.
+
+## Proof-of-Concept
+User feedback was obtained in the form of "Would you use an app that enables ____?". Requesting feedback in this manner has resulted in all positive feedback, thus guiding us to our first use-case proof-of-concept milestone.
+
+An example useage scenario may look as follows: 
+1. User A wants to borrow money from User B. 
+2. User A scans a QR code provided by User B. 
+3. User A sends a loan request to User B.
+4. User B accepts(/denies) loan request.
+5. User A receives lump-sum loan amount from User B.
+6. User B receives "stream" from User A.
+
+## Contributing
+We welcome all contributions and are excited to build with you! One way would be to fork the repo, implement your features, then create a PR from the fork. Someone will review the PR to approve/reject. For questions, you can reach out on our [Discord Channel](https://discord.gg/KdyG52dz)
 
 The CompanyManager SC Deployed in the Polygon Network:
 https://mumbai.polygonscan.com/address/0xad0448749ac74ad9c3f873abee181c7080dca09f
