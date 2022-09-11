@@ -15,8 +15,9 @@ import NextLink from "next/link";
 
 const Links = [
     { name: "Home", path: "/" },
-    { name: "Company", path: "/company" },
-    { name: "Employee", path: "/employee" }
+    // { name: "Company", path: "/company" },
+    { name: "Employee", path: "/employee" },
+    { name: "Market", path: "/market" }
 ];
 
 export default function NavLink() {

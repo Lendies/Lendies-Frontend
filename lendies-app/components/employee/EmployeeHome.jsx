@@ -16,9 +16,7 @@ export default function EmployeeHome() {
 
     useEffect(() => {
         updateActiveLoans();
-        setActiveLoans(activeLoans)
-    }, [active, activeLoans, updateActiveLoans]);
-
+    }, []);
 
     async function updateActiveLoans() {
         console.log("updating active loans");
@@ -29,23 +27,23 @@ export default function EmployeeHome() {
                   library.getSigner(account)
               )
             : "";
-            
+
         if (loanSC != "") {
             const l_id = await loanSC.functions.loanId();
-            console.log(l_id)
+            console.log(l_id);
             for (var id = 1; id <= l_id; id++) {
                 const loanAddr = await loanSC.functions.idToLoan(id);
-                console.log(loanAddr)
+                console.log(loanAddr);
                 const loanContract = new Contract(
                     loanAddr[0],
                     EmploymentLoan.abi,
                     library.getSigner(account)
                 );
-                console.log(loanContract)
+                console.log(loanContract);
                 const tmp = await loanContract.functions.borrower();
 
                 const loanOp = await loanContract.functions.loanOpen();
-                setActiveLoans(current => [...current, loanContract])
+                setActiveLoans((current) => [...current, loanContract]);
             }
         }
     }
@@ -60,22 +58,33 @@ export default function EmployeeHome() {
     ];
 
     return (
-        <VStack>
-            <VStack>
-                <Heading mt={5} fontSize="4xl">
-                    Credit Score
-                </Heading>
-                <Box p={6} borderRadius={"100"} background="blue.400">
-                    <Text fontSize="4xl">640</Text>
-                </Box>
+        <Flex justifyContent={"center"} p={6}>
+            <VStack border={"1px"} borderRadius="2xl" bg={"#613DC1"}>
+                <VStack>
+                    <Text textStyle={"h2"} p={"4"}>
+                        Member Profile
+                    </Text>
+                    <Heading mt={5} fontSize="4xl">
+                        Credit Score
+                    </Heading>
+                    <Box
+                        p={6}
+                        border={"4px"}
+                        borderColor={"blackAlpha.200"}
+                        borderRadius={"100"}
+                        background="#4E148C"
+                    >
+                        <Text fontSize="4xl">640</Text>
+                    </Box>
+                </VStack>
+
+                <HStack>
+                    <EmplDeployForm runSetActiveLoans={updateActiveLoans} />
+                    <EmployeeListView data={activeLoans} />
+                </HStack>
+
+                <LoanHistoryView data={dummyData} />
             </VStack>
-
-            <HStack>
-                <EmplDeployForm runSetActiveLoans={updateActiveLoans} />
-                <EmployeeListView data={activeLoans} />
-            </HStack>
-
-            <LoanHistoryView data={dummyData} />
-        </VStack>
+        </Flex>
     );
 }

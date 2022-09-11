@@ -19,7 +19,7 @@ export default function EmployeeListView(props) {
             <Heading>Active Loans</Heading>
             <Box overflowY="auto" maxHeight="400px">
                 <Table variant="striped" colorScheme="facebook">
-                    <Thead position="sticky" bgColor="grey">
+                    <Thead position="sticky" bgColor="blue.200">
                         <Tr>
                             <Th color={"blackAlpha.900"}>Address</Th>
                             <Th color={"blackAlpha.900"}>Borrow Amount</Th>
